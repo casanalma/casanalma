@@ -1,56 +1,271 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casanalma - Conexión Interior</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Montserrat', sans-serif; background-color: #faf9f6; color: #2d2d2d; }
-    .gradient-bg { background: linear-gradient(135deg, #d9c5f0 0%, #f6e6f8 100%); }
-    .cta-button { transition: all 0.3s ease; }
-    .cta-button:hover { transform: scale(1.05); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casanalma | Reconecta con tu esencia</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f6ff;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #f2ebff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 60px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        header img {
+            height: 100px;
+            margin-right: 100px;
+        }
+        header h1 {
+            color: #7e57c2;
+            font-size: 20px;
+        }
+        nav a {
+            color: #7e57c2;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 30px;
+            background: linear-gradient(to right, #ede7ff, #f3ecff);
+        }
+        .hero h2 {
+            color: #4a148c;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .hero p {
+            color: #6a1b9a;
+            font-size: 18px;
+        }
+        .hero button {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .hero button:hover {
+            background-color: #6a1b9a;
+        }
+
+        .about {
+            text-align: center;
+            padding: 80px 30px;
+        }
+        .about img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .about h3 {
+            color: #6a1b9a;
+            margin-top: 30px;
+            font-size: 22px;
+        }
+
+        .testimonios {
+            background-color: #f3ecff;
+            padding: 80px 30px;
+            text-align: center;
+        }
+        .testimonios h3 {
+            color: #6a1b9a;
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        .testimonios-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .testimonio {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            width: 280px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .testimonio h4 {
+            color: #7e57c2;
+            margin-bottom: 10px;
+        }
+
+        .agenda {
+            text-align: center;
+            padding: 80px 30px;
+        }
+        .agenda button {
+            margin: 10px;
+            background-color: #00c853;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .agenda button:hover {
+            background-color: #009624;
+        }
+        .agenda .pago {
+            background-color: #8e24aa;
+        }
+        .agenda .pago:hover {
+            background-color: #6a1b9a;
+        }
+
+        .tienda {
+            background-color: #f3ecff;
+            text-align: center;
+            padding: 80px 30px;
+        }
+        .tienda h3 {
+            color: #6a1b9a;
+            margin-bottom: 40px;
+        }
+        .productos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .producto {
+            background: white;
+            border-radius: 20px;
+            width: 280px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding-bottom: 20px;
+        }
+        .producto h4 {
+            background-color: #ede7ff;
+            color: #7e57c2;
+            padding: 25px 0;
+            border-radius: 20px 20px 0 0;
+            font-size: 28px;
+        }
+        .producto p {
+            padding: 0 20px;
+        }
+        .producto button {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f6ff;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Encabezado -->
-  <header class="flex justify-between items-center p-6 bg-white shadow-md">
-    <div class="flex items-center space-x-3">
-      <img src="https://drive.google.com/uc?export=view&id=1odZ4Pp73vFZqAYNQ5fqb_IWr0bqKwdwe" alt="Logo Casanalma" class="h-12 w-12 rounded-full">
-      <h1 class="text-2xl font-semibold text-violet-700">Casanalma</h1>
+<header>
+    <div style="display:flex; align-items:center;">
+        <img src="https://github.com/frederst0525-oss/casanalma/blob/main/LogoCasanalma.jpeg?raw=true" alt="Logo Casanalma">
+        <h1>Casanalma</h1>
     </div>
-    <a href="https://wa.me/573007149907?text=Hola,%20quisiera%20agendar%20una%20sesión%20en%20Casanalma" target="_blank" class="bg-violet-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-violet-600">Agenda tu sesión</a>
-  </header>
+    <nav>
+        <a href="#about">Sobre mí</a>
+        <a href="#testimonios">Almas</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#tienda">Tienda</a>
+    </nav>
+</header>
 
-  <!-- Sección principal -->
-  <section class="gradient-bg text-center py-20 px-6">
-    <div class="max-w-3xl mx-auto">
-      <img src="https://drive.google.com/uc?export=view&id=108ha2YRlvRuYmVB0jfOe2_9ArDlnhXuM" alt="Foto Casanalma" class="rounded-full shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover mx-auto mb-8">
-      <h2 class="text-4xl font-bold text-violet-700 mb-4">Reconecta con tu esencia</h2>
-      <p class="text-lg text-gray-700 mb-8">En <strong>Casanalma</strong> te acompaño a armonizar tu energía y reencontrarte con la calma interior a través de terapias conscientes, conexión y propósito.</p>
-      <div class="space-y-4">
-        <a href="https://wa.me/573007149907?text=Hola,%20quiero%20saber%20más%20sobre%20Casanalma" target="_blank" class="block w-full md:w-auto mx-auto bg-violet-600 text-white px-8 py-4 rounded-full text-lg font-semibold cta-button hover:bg-violet-700">Hablar por WhatsApp</a>
-        <a href="https://mpago.li/169bmDr" target="_blank" class="block w-full md:w-auto mx-auto bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold cta-button hover:bg-green-600">Pagar mi consulta</a>
-      </div>
+<section class="hero">
+    <h2>Encuentra en tu crisis una puerta a la sanación</h2>
+    <p>Te guío en un camino de regreso a tu esencia con amor, claridad y autenticidad.</p>
+    <a href="#agenda"><button>Quiero mi consulta</button></a>
+</section>
+
+<section id="about" class="about">
+    <img src="https://github.com/frederst0525-oss/casanalma/blob/main/FotoD.jpeg?raw=true" alt="Foto Casanalma">
+    <h3>Sobre mí</h3>
+    <p>
+        Soy guía y acompañante en procesos de reconexión espiritual, con más de 5 años acompañando almas en su camino de crecimiento, sanación y autodescubrimiento.
+        En Casanalma encontrarás un espacio para liberar, comprender y recordar quién eres realmente.
+    </p>
+</section>
+
+<section id="testimonios" class="testimonios">
+    <h3>Almas en su Esencia</h3>
+    <div class="testimonios-container">
+        <div class="testimonio">
+            <h4>Testimonio 1</h4>
+            <p>“El proceso con Casanalma me devolvió la paz que había perdido.”</p>
+            <small>- Ana G.</small>
+        </div>
+        <div class="testimonio">
+            <h4>Testimonio 2</h4>
+            <p>“Encontré claridad y conexión con mi alma que antes no sentía.”</p>
+            <small>- Laura H.</small>
+        </div>
+        <div class="testimonio">
+            <h4>Testimonio 3</h4>
+            <p>“Aprendí a amarme desde el alma y ver mi mayor fortaleza.”</p>
+            <small>- Carla S.</small>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Sección sobre mí -->
-  <section class="py-16 px-6 text-center bg-white">
-    <div class="max-w-3xl mx-auto">
-      <h3 class="text-3xl font-bold text-violet-700 mb-4">Sobre mí</h3>
-      <p class="text-gray-700 leading-relaxed mb-6">Soy guía y acompañante en procesos de reconexión espiritual, con más de 5 años acompañando almas en su camino de crecimiento, sanación y autodescubrimiento. En Casanalma encontrarás un espacio para liberar, comprender y recordar quién eres realmente.</p>
-      <a href="https://wa.me/573007149907?text=Hola,%20quiero%20agendar%20una%20sesión%20personalizada" target="_blank" class="inline-block bg-violet-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-violet-600">Agendar sesión</a>
+<section id="agenda" class="agenda">
+    <h3>Agenda tu Sesión</h3>
+    <p>Da el primer paso para armonizar tu energía y reconectar con tu calma interior.</p>
+    <a href="https://wa.me/573007149907" target="_blank"><button>Agendar por WhatsApp</button></a>
+    <a href="https://mpago.li/169bmDr" target="_blank"><button class="pago">Pagar mi consulta</button></a>
+</section>
+
+<section id="tienda" class="tienda">
+    <h3>Mi Tienda Holística</h3>
+    <p>Encuentra herramientas para potenciar tu práctica espiritual y llevar la sanación a tu día a día.</p>
+    <div class="productos">
+        <div class="producto">
+            <h4>Ebook</h4>
+            <p><strong>Ebook: El Camino del Alma</strong><br>Una guía para tu despertar espiritual.</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <h4>Meditaciones</h4>
+            <p><strong>Pack de Meditaciones</strong><br>Audios para conectar con tu paz interior.</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <h4>Curso</h4>
+            <p><strong>Curso: Sanando con Cristales</strong><br>Aprende a usar la energía de los cristales.</p>
+            <button>Comprar</button>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Footer -->
-  <footer class="bg-violet-700 text-white py-6 text-center">
-    <p>&copy; 2025 Casanalma. Todos los derechos reservados.</p>
-    <p class="mt-2 text-sm">Con amor, desde tu conexión interior ✨</p>
-  </footer>
+<footer>
+    © 2025 Casanalma. Todos los derechos reservados. ✨
+</footer>
 
 </body>
 </html>
