@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casanalma - Conexión Interior</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; background-color: #faf9f6; color: #2d2d2d; }
+    .gradient-bg { background: linear-gradient(135deg, #d9c5f0 0%, #f6e6f8 100%); }
+    .cta-button { transition: all 0.3s ease; }
+    .cta-button:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="flex items-center space-x-3">
+      <img src="https://drive.google.com/uc?export=view&id=1odZ4Pp73vFZqAYNQ5fqb_IWr0bqKwdwe" alt="Logo Casanalma" class="h-12 w-12 rounded-full">
+      <h1 class="text-2xl font-semibold text-violet-700">Casanalma</h1>
+    </div>
+    <a href="https://wa.me/573007149907?text=Hola,%20quisiera%20agendar%20una%20sesión%20en%20Casanalma" target="_blank" class="bg-violet-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-violet-600">Agenda tu sesión</a>
+  </header>
+
+  <!-- Sección principal -->
+  <section class="gradient-bg text-center py-20 px-6">
+    <div class="max-w-3xl mx-auto">
+      <img src="https://drive.google.com/uc?export=view&id=108ha2YRlvRuYmVB0jfOe2_9ArDlnhXuM" alt="Foto Casanalma" class="rounded-full shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover mx-auto mb-8">
+      <h2 class="text-4xl font-bold text-violet-700 mb-4">Reconecta con tu esencia</h2>
+      <p class="text-lg text-gray-700 mb-8">En <strong>Casanalma</strong> te acompaño a armonizar tu energía y reencontrarte con la calma interior a través de terapias conscientes, conexión y propósito.</p>
+      <div class="space-y-4">
+        <a href="https://wa.me/573007149907?text=Hola,%20quiero%20saber%20más%20sobre%20Casanalma" target="_blank" class="block w-full md:w-auto mx-auto bg-violet-600 text-white px-8 py-4 rounded-full text-lg font-semibold cta-button hover:bg-violet-700">Hablar por WhatsApp</a>
+        <a href="https://mpago.li/169bmDr" target="_blank" class="block w-full md:w-auto mx-auto bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold cta-button hover:bg-green-600">Pagar mi consulta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección sobre mí -->
+  <section class="py-16 px-6 text-center bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h3 class="text-3xl font-bold text-violet-700 mb-4">Sobre mí</h3>
+      <p class="text-gray-700 leading-relaxed mb-6">Soy guía y acompañante en procesos de reconexión espiritual, con más de 5 años acompañando almas en su camino de crecimiento, sanación y autodescubrimiento. En Casanalma encontrarás un espacio para liberar, comprender y recordar quién eres realmente.</p>
+      <a href="https://wa.me/573007149907?text=Hola,%20quiero%20agendar%20una%20sesión%20personalizada" target="_blank" class="inline-block bg-violet-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-violet-600">Agendar sesión</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-violet-700 text-white py-6 text-center">
+    <p>&copy; 2025 Casanalma. Todos los derechos reservados.</p>
+    <p class="mt-2 text-sm">Con amor, desde tu conexión interior ✨</p>
+  </footer>
+
+</body>
+</html>
